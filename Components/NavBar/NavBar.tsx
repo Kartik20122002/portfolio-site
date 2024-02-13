@@ -1,6 +1,6 @@
 import { name } from "@/INFO"
 import Lenis from "@studio-freight/lenis"
-import {  circIn, useScroll } from "framer-motion"
+import {  circIn, cubicBezier, useScroll } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 
 const NavBar = ()=>{
@@ -47,7 +47,7 @@ const NavBar = ()=>{
       requestAnimationFrame(raf);
     }
     const ele = document.querySelector(goto);
-    if(ele) lenis.scrollTo(ele, {easing : circIn, duration : 1.2})
+    if(ele) lenis.scrollTo(ele, {easing : cubicBezier(0.5, 0, 0.75, 0), duration : 1.2})
 
     requestAnimationFrame(raf);
 
