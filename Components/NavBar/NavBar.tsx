@@ -1,7 +1,7 @@
 import { name } from "@/INFO"
 import Lenis from "@studio-freight/lenis"
 import {  circIn, cubicBezier, useScroll } from "framer-motion"
-import { useEffect, useRef, useState } from "react"
+import { useContext, useEffect, useRef, useState } from "react"
 
 const NavBar = ()=>{
    const [compact,setCompact] = useState(false);

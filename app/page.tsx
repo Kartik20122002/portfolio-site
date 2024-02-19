@@ -2,14 +2,15 @@
 import About from "@/Components/About/About";
 import Experience from "@/Components/Experience/Experience";
 import Home from "@/Components/Home/Home";
+import ProjectModal from "@/Components/Modals/ProjectModal";
 import NavBar from "@/Components/NavBar/NavBar";
 import Passion from "@/Components/Passion/Passion";
+import Projects from "@/Components/Projects/Projects";
 import Resume from "@/Components/Resume/Resume";
 import Lenis from "@studio-freight/lenis";
-import { useEffect} from "react";
+import { createContext, useEffect, useState} from "react";
 
 export default function App() {
-
 
   useEffect(()=>{
     const lenis = new Lenis();
@@ -23,15 +24,15 @@ export default function App() {
   },[]);
 
 
-
   return (
-    <div className="relative bg-white text-black">
+    <div className="relative w-full bg-white text-black">
       <NavBar />
       <Home/>
       <About/>
       <Passion/>
       <Experience/>
       <Resume/>
+      <Projects/>
       <div className="spaceDiv"></div>
     </div>
   );

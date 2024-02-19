@@ -71,7 +71,7 @@ const Experience = ()=>{
                 <div className="expPills mt-8">
                      <div className="expPills flex flex-col gap-4 justify-evenly">
                      {experience?.map((item,i)=>{
-                        return <div key={`pillExp_${i}`} className="pillofComp border flex flex-col gap-2 rounded-lg p-3">
+                        return <div key={`pillExp_${i}`} className="pillofComp shadow flex flex-col gap-2 rounded-lg p-3">
                             <div className="compName text-center text-2xl">{item.companyName}</div>
                             <div style={lato.style} className="role text-center text-lg">{item.role}</div>
                             <div className="compSkills mt-2 flex flex-wrap gap-2 md:gap-0 justify-evenly">
