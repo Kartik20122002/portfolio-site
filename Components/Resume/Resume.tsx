@@ -10,7 +10,7 @@ const Resume = ()=>{
         <div style={{fontFamily : lato.style.fontFamily}} className="heading font-light tracking-[1px] text-3xl">CHECK OUT MY RÉSUMÉ!</div>
         <Link style={{fontFamily : lato.style.fontFamily}}
         className=" font-light tracking-[1px] px-5 py-3 duration-300 shadow-md rounded glass ease-in-out border border-t-[#f8f8f848] border-x-[#ffffff11] border-b-[#ffffff02]
-        hover:bg-[rgba(254,254,254,0.2)] bg-[rgba(254,254,254,0.1)]"
+        hover:bg-[rgba(254,254,254,0.2)] bg-[rgba(254,254,254,0.1)] hover:px-7"
          target="_blank" href={'./PDFs/Resume.pdf'} >
             Grab A Copy
         </Link>

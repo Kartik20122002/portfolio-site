@@ -52,6 +52,14 @@ const ProjectPage = ({params} : any)=>{
                 <Image src={project?.imgLink} alt="projectImg" className="rounded-md" layout="fill" />
             </div>
 
+            <div className="flex flex-wrap justify-center mt-6 gap-8">
+                {project.stackUsed?.map((stack,i)=>{
+                    return <div key={`stackpill_${i}`} className="bg-[#000000] border-[#454545] !border-x-0 shadow !border-b-0 border-[2px] text-white px-4 py-2 rounded text-nowrap">
+                        {stack}
+                    </div>
+                })}
+            </div>
+
             <div style={{fontFamily : lato.style.fontFamily}} className="desc mx-auto mt-8 w-3/4 text-center text-[#000000a5] tracking-[1px]">{project?.desc}</div>
 
             <div className="Links flex mt-8 gap-10 justify-center">

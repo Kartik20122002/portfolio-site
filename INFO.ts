@@ -21,7 +21,7 @@ export const projects = [
         name: "Youtube Pro",
         type : 'Progressive Web App',
         imgLink: youtubepro,
-        desc : "Youtube Pro is ad-free video streaming platform created by me.",
+        desc : "Ad-Free Video Streaming and Downloading Platform, providing core features of YouTube. User can watch videos, channels, playlists, and can perform actions like subscribing, rating, comment, share, etc. Authenticated with Google Auth 2.0 for best security.",
         liveLink: 'https://youtubepro.vercel.app',
         gitLink : 'https://github.com/Kartik20122002/YouTube-2.0',
         stackUsed : ['Next.js','Tailwind CSS' , 'Typescript' , 'Framer Motion' , 'Next-Auth' ]
@@ -31,7 +31,7 @@ export const projects = [
         name: "Gmanager",
         type : 'Web App',
         imgLink: gmanager,
-        desc : "Gmanger is one of its kind",
+        desc : "Optimized Gmail PDF management through segregation by sender, enhancing navigation and retrieval efﬁciency for speciﬁc documents. Empowered users to create custom folders based on PDF attachments, promoting personalized content organization and efﬁcient workﬂows.Integrated PDF preview feature for immediate viewing, facilitating seamless downloading of PDFs as required enhancing user convenience and productivity. Validated by feedback from over 50 users.",
         liveLink : 'https://gmanager-gvl7.onrender.com/',
         gitLink : 'https://github.com/Kartik20122002/Gmanager',
         stackUsed : ['Node.js' , 'Express.js' , 'Passport.js' , 'EJS Template']
@@ -41,7 +41,7 @@ export const projects = [
         name: "Text-Tools",
         type : 'Web App',
         imgLink: texttools,
-        desc : 'Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college.Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college.Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college.',
+        desc : "Text-Tools is a Web-App to help users with various things such as Image to Text Translation, Paragraph Summarizer, Text to Speech,etc.With a User Account, Users can Sign up and save results in their account and directly download saved data to their local devices. Authenticated with JWT for best security.'",
         liveLink : 'https://texttools98.onrender.com/',
         gitLink : 'https://github.com/Kartik20122002/Text-Tools',
         stackUsed : ['Node.js' , 'Express.js', 'EJS Template']
