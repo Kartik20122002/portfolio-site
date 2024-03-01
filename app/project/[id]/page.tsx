@@ -1,12 +1,9 @@
 'use client'
 import { Lato, Roboto_Slab } from "next/font/google";
-import youtubepro from "@/public/Projects/YoutubePro.png"
-import gmanager from "@/public/Projects/Gmanager.png"
-import texttools from "@/public/Projects/Text-Tools.png"
 import { useRouter } from "next/navigation"
 import { MdOutlineKeyboardBackspace } from "react-icons/md";
 import Link from "next/link"
-import { name } from "@/INFO"
+import { name, projects } from "@/INFO"
 import Image from "next/image"
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
@@ -17,36 +14,7 @@ const lato = Lato({ weight: "300", subsets: ["latin"] });
 const robotSlab = Roboto_Slab({ weight: '300', subsets: ["latin"] });
 
 
-const projects = [
-    {
-        id: 0,
-        name: "Youtube Pro",
-        type : 'Progressive Web App',
-        imgLink: youtubepro,
-        desc : "Youtube Pro is ad-free video streaming platform created by me.",
-        liveLink: 'www.youtubepro.vercel.app',
-        gitLink : '#'
-    },
-    {
-        id: 1,
-        name: "Gmanager",
-        type : 'Web App',
-        imgLink: gmanager,
-        desc : "Gmanger is one of its kind",
-        liveLink : '#',
-        gitLink : '#',
-    },
-    {
-        id: 2,
-        name: "Text-Tools",
-        type : 'Web App',
-        imgLink: texttools,
-        desc : 'Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college.Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college.Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college. Text-Tools is project made by me in my second year of college.',
-        liveLink : '#',
-        gitLink : '#'
-    },
 
-]
 
 const ProjectPage = ({params} : any)=>{
     const navigate = useRouter();

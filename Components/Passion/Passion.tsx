@@ -30,7 +30,7 @@ const Passion = ()=>{
         {
             data?.map((item : any,index : any)=>{
                 return <div className="flex flex-col basis-1/3 grow-1 gap-7"  key={`workItem_${index}`}>
-                    <div className="workIconContainer border flex justify-center items-center">
+                    <div className="workIconContainer flex justify-center items-center">
                         <div className="workIcon flex items-center justify-center text-white text-5xl p-[4rem] rounded-full aspect-square bg-[#00009C]">
                             {item?.icon}
                         </div>

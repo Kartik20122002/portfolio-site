@@ -6,28 +6,12 @@ import texttools from "@/public/Projects/Text-Tools.png"
 import { useContext } from "react";
 import { FaSearchPlus } from "react-icons/fa";
 import Link from "next/link";
+import { projects } from "@/INFO";
 
 
 const lato = Lato({ weight: "300", subsets: ["latin"] });
 const robotSlab = Roboto_Slab({ weight: '300', subsets: ["latin"] });
 
-const projects = [
-    {
-        id: 0,
-        name: "Youtube Pro",
-        imgLink: youtubepro,
-    },
-    {
-        id: 1,
-        name: "Gmanager",
-        imgLink: gmanager,
-    },
-    {
-        id: 2,
-        name: "Text-Tools",
-        imgLink: texttools,
-    },
-]
 
 const Projects = () => {
 

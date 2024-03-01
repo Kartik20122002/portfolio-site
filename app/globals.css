@@ -49,16 +49,6 @@ body {
   }
 }
 
-.spaceDiv{
-  min-width: 100%;
-  min-height: 100vh;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000;
-}
-
 .HomeDiv{
   background-image: url("./../public/backgrounds/portbg.jpg");
   background-size: cover;
@@ -87,4 +77,10 @@ body {
 #resume .overlay{
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
   position: absolute;
+}
+
+.glass{
+  --tw-bg-opacity: 0.1;
+  --tw-backdrop-blur: blur(25px);
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }

@@ -9,8 +9,8 @@ const Resume = ()=>{
         <div className="overlay w-full h-full text-white flex flex-col gap-8 justify-center items-center">
         <div style={{fontFamily : lato.style.fontFamily}} className="heading font-light tracking-[1px] text-3xl">CHECK OUT MY RÉSUMÉ!</div>
         <Link style={{fontFamily : lato.style.fontFamily}}
-        className=" font-light tracking-[1px] px-5 py-3 duration-300 ease-in-out border-[2px]
-        hover:bg-[rgba(254,254,254,0.2)] hover:px-7 border-[#ccc]"
+        className=" font-light tracking-[1px] px-5 py-3 duration-300 shadow-md rounded glass ease-in-out border border-t-[#f8f8f848] border-x-[#ffffff11] border-b-[#ffffff02]
+        hover:bg-[rgba(254,254,254,0.2)] bg-[rgba(254,254,254,0.1)]"
          target="_blank" href={'./PDFs/Resume.pdf'} >
             Grab A Copy
         </Link>
