@@ -1,6 +1,8 @@
 'use client'
 import About from "@/Components/About/About";
+import Contact from "@/Components/Contact/Contact";
 import Experience from "@/Components/Experience/Experience";
+import Footer from "@/Components/Footer/Footer";
 import Home from "@/Components/Home/Home";
 import ProjectModal from "@/Components/Modals/ProjectModal";
 import NavBar from "@/Components/NavBar/NavBar";
@@ -33,7 +35,8 @@ export default function App() {
       <Experience/>
       <Resume/>
       <Projects/>
-      <div className="spaceDiv"></div>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }
