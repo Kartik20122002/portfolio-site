@@ -7,9 +7,9 @@ const robotSlab = Roboto_Slab({weight : '300', subsets : ["latin"]});
 
 const experience = [
     {
-        companyName : 'Kalvee',
+        companyName : 'KPIT',
         role : 'Full Stack Developer',
-        skills : ['React.js' , 'Node.js' , 'SCSS']
+        skills : ['React.js' , 'Java' , 'Python']
     },
     {
         companyName : 'Gypssy',
@@ -22,7 +22,7 @@ const skills = [
     { name: 'nextjs', icon: '/Skills/nextjs.svg' },
     { name: 'reactjs', icon: '/Skills/react.ico' },
     { name: 'firebase', icon: '/Skills/firebase.ico' },
-    { name: 'framer', icon: '/Skills/framer.ico' },
+    { name: 'framermotion', icon: '/Skills/framer.ico' },
     { name: 'typescript', icon: '/Skills/typescript.ico' },
     { name: 'nodejs', icon: '/Skills/nodejs.ico' },
     { name: 'git', icon: '/Skills/git.ico' },
