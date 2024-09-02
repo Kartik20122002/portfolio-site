@@ -1,54 +1,20 @@
-import { expTagline } from "@/INFO";
+import { experience, expTagline, skills } from "@/INFO";
 import { Lato, Roboto_Slab } from "next/font/google";
 import Image from "next/image";
 
 const lato = Lato({weight : "300" , subsets : ["latin"]});
 const robotSlab = Roboto_Slab({weight : '300', subsets : ["latin"]});
 
-const experience = [
-    {
-        companyName : 'KPIT',
-        role : 'Full Stack Developer',
-        skills : ['React.js' , 'Java' , 'Python']
-    },
-    {
-        companyName : 'Gypssy',
-        role : 'Front-End Developer',
-        skills : ['Next.js' , 'Redux' , 'Tailwind CSS']
-    },
-]
-
-const skills = [
-    { name: 'nextjs', icon: '/Skills/nextjs.svg' },
-    { name: 'reactjs', icon: '/Skills/react.ico' },
-    { name: 'firebase', icon: '/Skills/firebase.ico' },
-    { name: 'framermotion', icon: '/Skills/framer.ico' },
-    { name: 'typescript', icon: '/Skills/typescript.ico' },
-    { name: 'nodejs', icon: '/Skills/nodejs.ico' },
-    { name: 'git', icon: '/Skills/git.ico' },
-    { name: 'github', icon: '/Skills/github.ico' },
-    { name: 'html', icon: '/Skills/html.ico' },
-    { name: 'css', icon: '/Skills/css.ico' },
-    { name: 'javascript', icon: '/Skills/javascript.ico' },
-    { name: 'database', icon: '/Skills/database.ico' },
-    { name: 'java', icon: '/Skills/java.ico' },
-    { name: 'python', icon: '/Skills/python.ico' },
-    { name: 'mongodb', icon: '/Skills/mongodb.ico' },
-    { name: 'nextauth', icon: '/Skills/nextauth.png' },
-    { name: 'postman', icon: '/Skills/postman.ico' },
-    { name: 'redux', icon: '/Skills/redux.ico' },
-    { name: 'sql', icon: '/Skills/sql.ico' },
-    { name: 'tailwind', icon: '/Skills/tailwind-css.ico' },
-    { name: 'vs code', icon: '/Skills/visual-studio-code.ico' },
-]
 
 const Experience = ()=>{
-    return <div id="experience" className="py-[6rem] flex flex-col items-center gap-8">
-        <div style={lato.style} className="experienceHeading text-3xl tracking-[1px] font-light text-center">EXPERIENCE</div>
+    return <div id="experience" className="flex flex-col items-center gap-8 text-white">
+        <div className="overlay absolute h-full w-full" />
+        
+        <div style={lato.style} className="experienceHeading mt-8 z-[1] text-white text-3xl tracking-[1px] font-light text-center">EXPERIENCE</div>
 
-        <div style={robotSlab.style} className="expTagline font-light leading-[1.7] text-center w-5/6 md:w-[40%]">{expTagline}</div>
+        <div style={robotSlab.style} className="expTagline z-[1] text-white font-light leading-[1.7] text-center w-5/6 md:w-[40%]">{expTagline}</div>
 
-        <div className="min-w-full flex gap-8 md:gap-0 flex-col md:flex-row px-4 md:px-[10rem]">
+        <div className="min-w-full z-[1] text-white min-h-fit flex gap-8 md:gap-0 flex-col md:flex-row mb-8 px-4 md:px-[10rem]">
 
             <div className="skillsDiv basis-3/5 shrink-0 grow px-4">
                 <div style={{fontFamily : lato.style.fontFamily}} className="skilsHeading uppercase font-semibold tracking-[1px] text-lg">Some Technologies I&apos;ve worked with:</div>
@@ -57,7 +23,7 @@ const Experience = ()=>{
                         {
                         skills?.map((skillLink,i)=>{
                             return <div key={`skill_${i}`} className="pillImg relative w-[10%] aspect-square">
-                            <Image src={skillLink.icon} className="grayscale hover:grayscale-0 duration-300 ease-in-out " alt="skill" layout="fill" />
+                            <Image src={skillLink.icon} className="grayscale hover:grayscale-0 hover:scale-110 duration-300 ease-in-out " alt="skill" layout="fill" />
                             <div className="toolTip hidden absolute -bottom-6 left-0 w-full text-nowrap text-sm font-[500] text-center uppercase">{skillLink.name}</div>
                         </div>
                         })
@@ -78,7 +44,7 @@ const Experience = ()=>{
                             <div style={lato.style} className="role text-center text-lg">{item.role}</div>
                             <div className="compSkills mt-2 flex flex-wrap gap-2 md:gap-0 justify-evenly">
                                 {item?.skills?.map((compSkill,j)=>{
-                                    return <span key={`compSkill_${i}_${j}`} className="py-2 px-4 border rounded shadow-sm shadow-[#f3f3f3] bg-[#f3f3f3] border-t-[#e5e4e4] border-b-[transparent] border-r-[#f3f3f3] border-l-[#f3f3f3] cursor-default duration-1000" >{compSkill}</span>
+                                    return <span key={`compSkill_${i}_${j}`} className="py-2 px-4 border rounded bg-[#313131] border-t-[#4f4f4f] border-b-[transparent] border-x-[#3d3d3d] cursor-default duration-1000" >{compSkill}</span>
                                 })}
                             </div>
                         </div>
@@ -88,6 +54,7 @@ const Experience = ()=>{
                 </div>
             </div>
         </div>
+
     </div> 
 }
 
