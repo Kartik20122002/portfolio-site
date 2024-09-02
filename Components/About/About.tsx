@@ -1,5 +1,4 @@
-import { aboutme, currentDesignation, description, experience, firstName, name, tagline } from "@/INFO";
-import Image from "next/image";
+import { aboutme,  experience,  name } from "@/INFO";
 import { Lato, Roboto_Slab } from "next/font/google";
 
 const lato = Lato({ weight: "300", subsets: ["latin"] });
