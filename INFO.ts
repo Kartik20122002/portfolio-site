@@ -8,8 +8,6 @@ export const firstName = "Kartik";
 
 export const currentDesignation = "Software Developer";
 
-export const description = ""
-
 export const emailId = 'kartikhatwar98@gmail.com';
 
 export const aboutme = "In my free time, I love reading fiction books, listening to music, and watching movies. I also enjoy trekking and find peace and comfort in the mountains. Besides these, I love swimming and dancing, and I'm always eager to develop new hobbies and excel at them. If I'm not engaged in any of these activities, you'll likely find me petting dogs."

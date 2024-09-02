@@ -4,7 +4,6 @@ import Contact from "@/Components/Contact/Contact";
 import Experience from "@/Components/Experience/Experience";
 import Footer from "@/Components/Footer/Footer";
 import Home from "@/Components/Home/Home";
-import ProjectModal from "@/Components/Modals/ProjectModal";
 import NavBar from "@/Components/NavBar/NavBar";
 import Passion from "@/Components/Passion/Passion";
 import Projects from "@/Components/Projects/Projects";
@@ -33,8 +32,8 @@ export default function App() {
       <About/>
       <Passion/>
       <Experience/>
-      <Resume/>
       <Projects/>
+      <Resume/>
       <Contact/>
       <Footer/>
     </div>
