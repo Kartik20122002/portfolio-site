@@ -6,6 +6,11 @@ const robotSlab = Roboto_Slab({weight : '300', subsets : ["latin"]});
 const data = [
     {
         icon : <FaLaptopCode />,
+        name : 'Software Development',
+        desc : "Fueled by a passion for software development, I relish the opportunity to create innovative solutions and streamline processes. Dedicated to writing clean, adaptable code, my goal is to engineer software that not only meets user needs but also paves the way for future advancements in technology.",
+    },
+    {
+        icon : <FaLaptopCode />,
         name : 'Front End Development',
         desc : "With a deep-rooted love for frontend development, I thrive on crafting captivating web experiences and exploring the realms of user interface design. As I delve deeper into this dynamic field, my aim is to architect elegant, efficient code that not only enhances user interactions but also serves as a cornerstone for creating visually stunning applications.",
     },
@@ -14,11 +19,7 @@ const data = [
         name : 'Back End Development',
         desc : "Passionate about backend development, I enjoy crafting efficient systems and optimizing server-side functionality. I strive to engineer clean, scalable code that powers seamless digital experiences, always pushing the boundaries of innovation in the digital realm.",
     },
-    {
-        icon : <FaLaptopCode />,
-        name : 'Software Development',
-        desc : "Fueled by a passion for software development, I relish the opportunity to create innovative solutions and streamline processes. Dedicated to writing clean, adaptable code, my goal is to engineer software that not only meets user needs but also paves the way for future advancements in technology.",
-    },
+    
 ]
 
 const Passion = ()=>{
