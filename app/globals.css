@@ -60,7 +60,7 @@ body {
   position: relative;
 }
 
-.overlay{
+.HomeDiv .overlay{
   position: absolute;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.73) 17%, rgba(0, 0, 0, 0.66) 35%, rgba(0, 0, 0, 0.55) 62%, rgba(0, 0, 0, 0.4) 100%);
 }
@@ -76,6 +76,10 @@ body {
   position: relative;
 }
 
+#about .overlay{
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.4) 25%, rgba(0, 0, 0, 0.4) 32%, rgba(0, 0, 0, 0.4) 100%);
+}
 
 #experience{
   background-image: url("./../public/backgrounds/officebg.jpeg");
@@ -86,6 +90,10 @@ body {
   background-color: #000;
   color: #000;
   position: relative;
+}
+
+#experience .overlay{
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 10%, rgba(0, 0, 0, 0.65) 25%, rgba(0, 0, 0, 0.65) 32%, rgba(0, 0, 0, 0.65) 100%);
 }
 
 #resume {
