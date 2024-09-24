@@ -32,13 +32,13 @@ const Passion = ()=>{
             data?.map((item : any,index : any)=>{
                 return <div className="flex flex-col basis-1/3 grow-1 gap-7"  key={`workItem_${index}`}>
                     <div className="workIconContainer flex justify-center items-center">
-                        <div className="workIcon flex items-center justify-center text-white text-5xl p-[4rem] rounded-full aspect-square bg-[#00009C]">
+                        <div className="workIcon flex items-center justify-center text-white text-3xl md:!text-5xl p-[2rem] md:!p-[3.5rem] rounded-full aspect-square bg-[#00009C]">
                             {item?.icon}
                         </div>
                     </div>
                     <div className="workDetailContainer flex justify-center items-center flex-col gap-6">
                         <div className="workTitle uppercase font-light text-[#000] tracking-[1px]">{item?.name}</div>
-                        <div style={robotSlab.style} className="workDesc text-center font-light ">{item?.desc}</div>
+                        <div style={robotSlab.style} className="workDesc text-sm md:!text-[1rem] text-center font-light ">{item?.desc}</div>
                     </div>
                 </div>
             })

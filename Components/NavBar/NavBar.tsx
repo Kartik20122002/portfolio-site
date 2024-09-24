@@ -15,7 +15,7 @@ const NavBar = ()=>{
         { id : '#about' , name : "ABOUT" },
         { id : '#passion' , name : "PASSION" },
         { id : '#experience' , name : "EXPERIENCE" },
-        { id : '#work' , name : "WORK" },
+        { id : '#work' , name : "PROJECTS" },
         { id : '#contact' , name : "CONTACT" },
    ]
 

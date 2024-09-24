@@ -19,11 +19,11 @@ const robotSlab = Roboto_Slab({ weight: '300', subsets: ["latin"] });
 const ProjectPage = ({params} : any)=>{
     const navigate = useRouter();
     const {id} = params;
-    if(id > projects.length-1) navigate.push('/');
-
+    
     const project = projects[id];
-
+    
     useEffect(()=>{
+        if(id > projects.length-1) navigate.push('/');
         const lenis = new Lenis();
         function raf(time : any){
           lenis.raf(time)

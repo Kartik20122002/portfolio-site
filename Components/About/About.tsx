@@ -18,7 +18,7 @@ const About = () => {
 
       <div className={`${robotSlab.className} aboutdiv w-full flex flex-col sm:!flex-row py-[6rem] sm:text-xl font-light leading-relaxed tracking-[1px] gap-4 sm:gap-0 items-center text-white`}>
 
-        <div className="pr-[2vw] sm:pr-[7vw] pl-[2vw] py-8 sm:pl-[4vw] basis-1/2 grow ">
+        <div className="pr-[2vw] sm:pr-[7vw] pl-[2vw] text-center py-8 sm:pl-[4vw] basis-1/2 grow ">
         Hey! My name is {name} and I&apos;m a{" "}
         <span className="text-[yellow] !font-bold"> Software developer</span> with a
         passion for Web Development and Software Designs. I&apos;m currently a
@@ -30,7 +30,7 @@ const About = () => {
         through crafting beautiful software and engaging experiences.
         </div>
 
-        <div className="pl-[2vw] sm:pl-[7vw] pr-[2vw] sm:pr-[4vw] basis-1/2 grow ">
+        <div className="pl-[2vw] sm:pl-[7vw] text-center pr-[2vw] sm:pr-[4vw] basis-1/2 grow ">
         {aboutme}
         </div>
 

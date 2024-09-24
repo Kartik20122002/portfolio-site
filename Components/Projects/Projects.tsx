@@ -1,16 +1,11 @@
-import { Lato, Roboto_Slab } from "next/font/google";
+import { Lato } from "next/font/google";
 import Image from "next/image";
-import youtubepro from "@/public/Projects/YoutubePro.png"
-import gmanager from "@/public/Projects/Gmanager.png"
-import texttools from "@/public/Projects/Text-Tools.png"
-import { useContext } from "react";
 import { FaSearchPlus } from "react-icons/fa";
 import Link from "next/link";
 import { projects } from "@/INFO";
 
 
 const lato = Lato({ weight: "300", subsets: ["latin"] });
-const robotSlab = Roboto_Slab({ weight: '300', subsets: ["latin"] });
 
 
 const Projects = () => {
