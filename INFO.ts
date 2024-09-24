@@ -24,12 +24,12 @@ export const experience = [
     },
     {
         companyName : 'Gypssy',
-        role : 'Front-End Developer',
+        role : 'Front-End Developer Intern',
         skills : ['Next.js' , 'Redux' , 'Tailwind CSS']
     },
     {
         companyName : 'Kalvee EdTech',
-        role : 'Full Stack Developer',
+        role : 'Full Stack Developer Intern',
         skills : ['React.js' , 'Tailwind CSS' , 'Typscript']
     }
 ]
