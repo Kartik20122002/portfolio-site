@@ -71,13 +71,13 @@ const ProjectPage = ({params} : any)=>{
                 </div>
                 <div className=" basis-1/2 grow flex flex-col gap-6">
                     <div className="p-4 text-white flex flex-col gap-3">
-                    <div className="font-bold text-2xl">About </div>
+                    <div className="font-bold text-2xl">About</div>
                     {project?.desc?.map((item,i)=>{
                             return <li key={`desc_${id}_${i}`}>{item}</li>
                         })}
                     </div>
                     <div className="flex flex-col px-4 gap-4">
-                        <div className="font-bold text-2xl text-white">Tech Stack </div>
+                        <div className="font-bold text-2xl text-white">Tech Stack</div>
                         <div className="flex flex-wrap gap-4">
                         {project.stackUsed?.map((stack,i)=>{
                             return <div key={`stackpill_${i}`} className="bg-[#000000] border-[#454545] !border-x-0 shadow !border-b-0 border-[2px] text-white px-4 py-2 rounded text-nowrap">
