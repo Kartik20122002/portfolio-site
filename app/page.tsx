@@ -5,11 +5,11 @@ import Experience from "@/Components/Experience/Experience";
 import Footer from "@/Components/Footer/Footer";
 import Home from "@/Components/Home/Home";
 import NavBar from "@/Components/NavBar/NavBar";
-import Passion from "@/Components/Passion/Passion";
 import Projects from "@/Components/Projects/Projects";
 import Resume from "@/Components/Resume/Resume";
 import Lenis from "@studio-freight/lenis";
-import { createContext, useEffect, useState} from "react";
+import { useEffect} from "react";
+import Skills from "@/Components/Skills/Skills";
 
 export default function App() {
 
@@ -30,7 +30,7 @@ export default function App() {
       <NavBar />
       <Home/>
       <About/>
-      <Passion/>
+      <Skills/>
       <Experience/>
       <Projects/>
       <Resume/>

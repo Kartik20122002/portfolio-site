@@ -13,7 +13,7 @@ const NavBar = ()=>{
 
    const Links = [
         { id : '#about' , name : "ABOUT" },
-        { id : '#passion' , name : "PASSION" },
+        { id : '#skills' , name : "SKILLS" },
         { id : '#experience' , name : "EXPERIENCE" },
         { id : '#work' , name : "PROJECTS" },
         { id : '#contact' , name : "CONTACT" },
@@ -61,7 +61,7 @@ const NavBar = ()=>{
    },[goto])
 
 
-  return <nav ref={navRef} className="fixed duration-500 ease-in-out flex items-center justify-between md:px-[3rem] px-[1rem] py-7 z-10 w-full">
+  return <nav ref={navRef} className="fixed  duration-500 ease-in-out flex items-center justify-between md:px-[3rem] px-[1rem] py-7 z-10 w-full">
         <div onClick={()=>setGoto('#home')} className="hover:opacity-80 text-[#ccc]  font-medium cursor-pointer">{name.toLocaleUpperCase() || "USER"}</div>
 
         <div className="hidden md:!flex gap-8">
