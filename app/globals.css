@@ -82,20 +82,7 @@ body {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 10%, rgba(0, 0, 0, 0.4) 25%, rgba(0, 0, 0, 0.4) 32%, rgba(0, 0, 0, 0.4) 100%);
 }
 
-#experience{
-  background-image: url("./../public/backgrounds/officebg.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-color: #000;
-  color: #000;
-  position: relative;
-}
 
-#experience .overlay{
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.65) 10%, rgba(0, 0, 0, 0.65) 25%, rgba(0, 0, 0, 0.65) 32%, rgba(0, 0, 0, 0.65) 100%);
-}
 
 #resume {
   background: url('./../public/backgrounds/laptop-blur.jpg');
