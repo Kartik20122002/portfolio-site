@@ -23,7 +23,7 @@ export const experience = [
         location : "Pune, MH",
         dates : "June'24 - Present",
         workInfo : "The sun dipped below the horizon, casting a warm, golden hue across the landscape. Birds chirped softly as the evening breeze rustled the leaves, carrying the scent of fresh pine. The calm lake reflected the colors of the fading sky, a perfect mirror of nature's beauty. In the distance, the sound of laughter echoed from a group of friends gathered around a campfire, roasting marshmallows and sharing stories. The world seemed to slow down, allowing a moment of pure tranquility. As darkness settled in, the stars began to twinkle, signaling the end of another peaceful day in the wilderness.",
-        skills : ['React.js' , 'Java' , 'Python']
+        skills : ['React.js' , 'Java' , 'Python' , "Electron" , "Tailwind CSS" , "Dev Ops" , "C++" , "Unit Testing"]
     },
     {
         companyName : 'Gypssy',
@@ -39,7 +39,7 @@ export const experience = [
         location : "Remote",
         dates: "Mar'24 - May'24",
         workInfo : "The sun dipped below the horizon, casting a warm, golden hue across the landscape. Birds chirped softly as the evening breeze rustled the leaves, carrying the scent of fresh pine. The calm lake reflected the colors of the fading sky, a perfect mirror of nature's beauty. In the distance, the sound of laughter echoed from a group of friends gathered around a campfire, roasting marshmallows and sharing stories. The world seemed to slow down, allowing a moment of pure tranquility. As darkness settled in, the stars began to twinkle, signaling the end of another peaceful day in the wilderness.",
-        skills : ['React.js' , 'Tailwind CSS' , 'Typscript']
+        skills : ['React.js' , 'Tailwind CSS' , 'Typscript' , "Redux"]
     }
 ]
 

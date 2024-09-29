@@ -39,7 +39,7 @@ const Footer = ()=>{
         <div className="flex gap-[.4rem] justify-center flex-wrap">
 
             {SocialLinks?.map((item)=>{
-                return <Link target="_blank" className={`text-white shadow bg-[#56565624] hover:bg-[#56565654] border border-t-[#4c4c4c8f] border-b-[transparent] border-r-[#56565624]  border-l-[#56565624] rounded-md hover:scale-[1.2] duration-300 p-[1rem] text-[1.3rem]`} key={item.id} href={item.link}>
+                return <Link target="_blank" className={`text-white shadow bg-[#56565624] hover:bg-[#56565654] border border-t-[#4c4c4c8f] border-b-[transparent] border-x-[#56565624] rounded-md hover:scale-[1.2] duration-300 p-[1rem] text-[1.3rem]`} key={item.id} href={item.link}>
                     {item.icon}
                 </Link>
             })}

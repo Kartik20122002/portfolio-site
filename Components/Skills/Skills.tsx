@@ -1,23 +1,24 @@
 import { skills } from "@/INFO";
-import { Lato , Roboto_Slab } from "next/font/google";
+import { Lato  } from "next/font/google";
 import Image from "next/image";
-import {  FaDev, FaHeadSideVirus, FaLaptopCode } from "react-icons/fa";
 import { Tooltip } from "react-tooltip";
 const lato = Lato({weight : "300" , subsets : ["latin"]});
-const robotSlab = Roboto_Slab({weight : '300', subsets : ["latin"]});
-
+import {motion , Reorder} from "framer-motion"
+import { useState } from "react";
 
 
 const Skills = ()=>{
-    return <div id="skills" className="py-[6rem] bg-[#F0F0F0]">
+  const [skillsA,setSkills] = useState(skills)
+    return <motion.div id="skills" className="py-[6rem] bg-white min-h-[100vh] text-black">
 
-    <div className={`${lato.className} passionTitle text-center font-light tracking-[1px] text-3xl`}>What I Excel</div>
+    <motion.div className={`${lato.className} passionTitle text-center font-light tracking-[1px] text-3xl`}>What I Excel</motion.div>
 
-    <div className="mt-[3.5rem] flex gap-12 md:gap-4 flex-col md:flex-row px-2 justify-evenly">
-              <div className="pills flex flex-wrap justify-evenly gap-10">
-                {skills?.map((skillLink, i) => {
+    <motion.div className="mt-[3.5rem] flex gap-12 md:gap-4 flex-col md:flex-row px-2 justify-evenly">
+              <motion.div className="pills flex flex-wrap justify-evenly gap-10">
+                {skillsA?.map((skillLink, i) => {
                   return (
-                    <div
+                    <motion.div layout initial={{scale : 0.3 , opacity : 0.5}} whileInView={{scale : 1 , opacity : 1}} viewport={{once : true}}
+                    transition={{delay : Math.random()*0.15 , duration : 0.5}}
                       key={`skill_${i}`}
                       data-tooltip-id="my-tooltip"
                       data-tooltip-content={skillLink.name}
@@ -29,13 +30,13 @@ const Skills = ()=>{
                         alt="skill"
                         layout="fill"
                       />
-                    </div>
+                    </motion.div>
                   );
                 })}
-              </div>
+              </motion.div>
               <Tooltip id="my-tooltip" />
-            </div>
-</div>
+            </motion.div>
+</motion.div>
 }
 
 export default Skills;

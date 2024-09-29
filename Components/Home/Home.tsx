@@ -1,9 +1,18 @@
 import { firstName } from "@/INFO";
 import Lenis from "@studio-freight/lenis";
+import { useScroll, useTransform , motion, cubicBezier, easeInOut} from "framer-motion";
+import { useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
-import { BsEject } from "react-icons/bs";
 
 const Home = ()=>{
+
+    const ref = useRef(null)
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ["end end", "end start"]
+    })
+
+    const opacity = useTransform(scrollYProgress,[0.5,1],[1,-1])
 
     const gotoAbout = ()=>{
         const lenis = new Lenis();
@@ -20,20 +29,21 @@ const Home = ()=>{
         return ()=>lenis.destroy();
         }
 
-    return <div id="home" className="min-w-full HomeDiv min-h-[100vh]">
-        <div className="overlay min-w-full min-h-full flex justify-center items-center">
-                <div className="Title h-full pt-32 text-white flex flex-col gap-4 items-center justify-center">
-                    <div className="text-center text-[3.75rem] tracking-[3px] font-light">HI, I&apos;M {firstName?.toLocaleUpperCase() || "User"}</div>
-                    <div className="Position text-[#ddd] text-center ">
+        const transition = {duration : 0.35 , easings : easeInOut}
+
+    return <motion.div ref={ref} layout id="home" className="min-w-full HomeDiv min-h-[100vh]">
+        <motion.div layout className="overlay min-w-full min-h-full flex justify-center items-center">
+                <motion.div layout className="Title h-full pt-32 text-white flex flex-col gap-6 items-center justify-center">
+                    <motion.div viewport={{once : true}} initial={{opacity : 0 , translateY : -25}} whileInView={{opacity : 1 , translateY : 0}} transition={transition} layout style={{opacity}} className="text-center text-[3.75rem] tracking-[3px] font-light">HI, I&apos;M {firstName?.toLocaleUpperCase() || "User"}</motion.div>
+                    <motion.div viewport={{once : true}} initial={{opacity : 0 , translateY : 25}} whileInView={{opacity : 1 , translateY : 0}} transition={transition} layout style={{opacity}} className="Position text-[#ddd] text-center ">
                         Software Developer & Web Enthusiast
-                    </div>
-                    <div className="aboutbt mt-32">
+                    </motion.div>
+                    <motion.div initial={{translateY : -50 , opacity : 0}} whileInView={{translateY : 0 , opacity : 1}} viewport={{once : true}} transition={transition} layout style={{opacity}} className="aboutbt mt-32">
                         <IoIosArrowDown onClick={()=>gotoAbout()} className="text-white hover:translate-y-1 duration-300 cursor-pointer font-thin text-6xl"/>
-                        {/* <BsEject onClick={()=>gotoAbout()} className="text-white rotate-180 hover:translate-y-1 duration-300 cursor-pointer font-thin text-3xl"/> */}
-                    </div>
-                </div>
-        </div>
-  </div>
+                    </motion.div>
+                </motion.div>
+        </motion.div>
+  </motion.div>
 }
 
 export default Home;

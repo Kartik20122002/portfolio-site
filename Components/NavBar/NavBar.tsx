@@ -1,6 +1,6 @@
 import { name } from "@/INFO"
 import Lenis from "@studio-freight/lenis"
-import { cubicBezier, useScroll } from "framer-motion"
+import { cubicBezier, useScroll , motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 import { SlMenu } from "react-icons/sl";
 
@@ -60,14 +60,24 @@ const NavBar = ()=>{
 
    },[goto])
 
+   const transition = {duration : 0.35 }
 
-  return <nav ref={navRef} className="fixed  duration-500 ease-in-out flex items-center justify-between md:px-[3rem] px-[1rem] py-7 z-10 w-full">
-        <div onClick={()=>setGoto('#home')} className="hover:opacity-80 text-[#ccc]  font-medium cursor-pointer">{name.toLocaleUpperCase() || "USER"}</div>
+
+  return <motion.nav layout ref={navRef} className="fixed duration-500 ease-in-out flex items-center justify-between md:px-[3rem] px-[1rem] py-7 z-10 w-full">
+        <motion.div viewport={{once : true}} layout initial={{opacity : 0 , translateX : -25}} whileInView={{opacity : 1 , translateX : 0}} transition={transition} onClick={()=>setGoto('#home')} className="hover:opacity-80 text-[#ccc]  font-medium cursor-pointer">{name.toLocaleUpperCase() || "USER"}</motion.div>
 
         <div className="hidden md:!flex gap-8">
             {
-                Links.map((link : any)=>{
-                    return <div onClick={()=>setGoto(link.id)} key={`navLink${link?.id}`} className="text-[0.8rem] text-[#fff] duration-200 cursor-pointer font-normal tracking-[1px] hover:text-[#ccc]">{link?.name}</div>
+                Links.map((link : any , i)=>{
+                    return <motion.div 
+                    initial={{opacity : 0 , translateY : -20}} 
+                    whileInView={{opacity : 1 , translateY : 0}} 
+                    viewport={{once : true}}  
+                    transition={{duration : 0.35,delay : 0.35 + 0.1*(i) }} 
+                    onClick={()=>setGoto(link.id)} key={`navLink${link?.id}`} 
+                    className="text-[0.8rem] text-[#fff] cursor-pointer font-normal tracking-[1px] hover:text-[#ccc]">
+                        {link?.name}
+                    </motion.div>
                 })
             }
         </div>
@@ -87,7 +97,7 @@ const NavBar = ()=>{
         }
 
         </div>
-    </nav>
+    </motion.nav>
 }
 
 export default NavBar;
