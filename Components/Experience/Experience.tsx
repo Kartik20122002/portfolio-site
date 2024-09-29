@@ -30,7 +30,7 @@ const Experience = () => {
                 Experience
               </motion.div>
               <motion.div layout style={robotSlab.style} className="expTagline w-full text-lg font-light leading-[1.7] text-center">
-                {aboutme + expTagline}
+                {expTagline}
               </motion.div>
             </motion.div>
 
