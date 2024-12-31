@@ -18,7 +18,7 @@ const robotSlab = Roboto_Slab({ weight: '300', subsets: ["latin"] });
 
 const ProjectPage = ({params} : any)=>{
     const navigate = useRouter();
-    const {id} = params;
+    const [id,setId] = useState(0);
     const [isLive , setIsLive] = useState(false);
     
     const project = projects[id];
@@ -26,6 +26,14 @@ const ProjectPage = ({params} : any)=>{
     const toggleLive = ()=>{
         setIsLive(e => !e);
     }
+
+    useEffect(()=>{
+        const getId = async ()=>{
+            const pid = await params;
+            setId(pid.id);
+        }
+        getId();
+    },[]);
     
     useEffect(()=>{
         if(id > projects.length-1) navigate.push('/');
@@ -40,7 +48,9 @@ const ProjectPage = ({params} : any)=>{
       },[]);
 
 
-    return <div style={robotSlab.style} className="w-full bg-[#181818] flex flex-col gap-4 min-h-[100vh]">
+    return <>
+
+     <div style={robotSlab.style} className="w-full bg-[#181818] flex flex-col gap-4 min-h-[100vh]">
         <div className="z-10 sticky top-0 bg-black py-4 px-6 flex justify-between">
         <Link href='/' className="hover:opacity-80 text-[#ccc] font-medium cursor-pointer">{name.toLocaleUpperCase() || "USER"}</Link>
         <button onClick={()=>navigate.back()} className="flex text-white gap-2 font-semibold items-center">
@@ -114,6 +124,7 @@ const ProjectPage = ({params} : any)=>{
             </div>
         </div> */}
     </div>
+    </> 
 }
 
 export default ProjectPage;

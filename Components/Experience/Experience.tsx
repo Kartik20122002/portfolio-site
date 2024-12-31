@@ -2,7 +2,7 @@ import { experience, expTagline, aboutme } from "@/INFO";
 import { Lato, Roboto_Slab } from "next/font/google";
 import { Tooltip } from "react-tooltip";
 import Image from "next/image";
-import {  cubicBezier, motion, useScroll, useTransform } from "framer-motion";
+import {  cubicBezier, motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
 const lato = Lato({ weight: "300", subsets: ["latin"] });

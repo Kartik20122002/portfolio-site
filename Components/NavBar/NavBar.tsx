@@ -1,6 +1,6 @@
 import { name } from "@/INFO"
 import Lenis from "@studio-freight/lenis"
-import { cubicBezier, useScroll , motion } from "framer-motion"
+import { cubicBezier, useScroll , motion } from "motion/react"
 import { useEffect, useRef, useState } from "react"
 import { SlMenu } from "react-icons/sl";
 

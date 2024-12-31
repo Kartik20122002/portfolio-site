@@ -1,6 +1,6 @@
 import { firstName } from "@/INFO";
 import Lenis from "@studio-freight/lenis";
-import { useScroll, useTransform , motion, cubicBezier, easeInOut} from "framer-motion";
+import { useScroll, useTransform , motion, cubicBezier, easeInOut} from "motion/react";
 import { useRef } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 

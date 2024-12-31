@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/INFO";
 import { useRef } from "react";
-import { useScroll, useTransform , motion, useMotionValue } from "framer-motion";
+import { useScroll, useTransform , motion, useMotionValue } from "motion/react";
 
 
 const lato = Lato({ weight: "300", subsets: ["latin"] });

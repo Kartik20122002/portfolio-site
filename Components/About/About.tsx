@@ -1,5 +1,5 @@
 import { aboutme,  experience,  name } from "@/INFO";
-import { useScroll, useTransform , motion } from "framer-motion";
+import { useScroll, useTransform , motion } from "motion/react";
 import { Lato, Roboto_Slab } from "next/font/google";
 import { useRef } from "react";
 

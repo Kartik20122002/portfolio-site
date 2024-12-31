@@ -3,7 +3,7 @@ import { Lato  } from "next/font/google";
 import Image from "next/image";
 import { Tooltip } from "react-tooltip";
 const lato = Lato({weight : "300" , subsets : ["latin"]});
-import {motion , Reorder} from "framer-motion"
+import {motion , Reorder} from "motion/react"
 import { useState } from "react";
 
 

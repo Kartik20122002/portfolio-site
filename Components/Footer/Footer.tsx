@@ -1,6 +1,6 @@
 import { name } from "@/INFO";
 import Lenis from "@studio-freight/lenis";
-import { cubicBezier } from "framer-motion";
+import { cubicBezier } from "motion/react";
 import { Lato, Roboto_Slab } from "next/font/google";
 import Link from "next/link";
 import {FaFacebookF , FaLinkedinIn , FaInstagram , FaTwitter ,FaGithub ,FaRegCopyright  } from "react-icons/fa"
