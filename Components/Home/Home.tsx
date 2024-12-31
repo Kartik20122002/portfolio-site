@@ -32,7 +32,7 @@ const Home = ({ setPage }: HomeProps) => {
             requestAnimationFrame(raf);
         };
         const ele = document.querySelector("#about");
-        if (ele) lenis.scrollTo(ele, { duration: 3 });
+        if (ele) lenis.scrollTo(ele as HTMLElement, { duration: 3 });
         
         requestAnimationFrame(raf);
         
