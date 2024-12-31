@@ -4,7 +4,6 @@ import {
     useScroll,
     useTransform,
     motion,
-    cubicBezier,
     easeInOut,
     useInView,
 } from "motion/react";
@@ -31,9 +30,10 @@ const Home = ({ setPage }: HomeProps) => {
             lenis.raf(time);
             requestAnimationFrame(raf);
         };
-        const ele = document.querySelector("#about") as string | number | HTMLElement;
-        if (ele) lenis.scrollTo(ele , { duration: 3 });
-        
+        const ele = document.querySelector("#about");
+        // Disable the rule for this line
+        // @ts-ignore        
+        if (ele) lenis.scrollTo(ele, { duration: 3 });
         requestAnimationFrame(raf);
         
         return () => lenis.destroy();
