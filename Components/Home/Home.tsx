@@ -31,8 +31,8 @@ const Home = ({ setPage }: HomeProps) => {
             lenis.raf(time);
             requestAnimationFrame(raf);
         };
-        const ele = document.querySelector("#about");
-        if (ele) lenis.scrollTo(ele as string | number | HTMLElement, { duration: 3 });
+        const ele = document.querySelector("#about") as string | number | HTMLElement;
+        if (ele) lenis.scrollTo(ele , { duration: 3 });
         
         requestAnimationFrame(raf);
         
