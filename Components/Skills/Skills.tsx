@@ -3,17 +3,31 @@ import { Lato  } from "next/font/google";
 import Image from "next/image";
 import { Tooltip } from "react-tooltip";
 const lato = Lato({weight : "300" , subsets : ["latin"]});
-import {motion , Reorder} from "motion/react"
-import { useState } from "react";
+import {motion , Reorder, useInView} from "motion/react"
+import { useEffect, useRef, useState } from "react";
 
 
-const Skills = ()=>{
-  const [skillsA,setSkills] = useState(skills)
-    return <motion.div id="skills" className="py-[6rem] bg-white min-h-[100vh] text-black">
+interface SkillsProps {
+  setPage: (page: string) => void;
+}
+
+const Skills = ({ setPage }: SkillsProps) => {
+  const [skillsA,setSkills] = useState(skills);
+
+  const ref = useRef(null);
+
+  const viewRef = useRef(null);
+    const isInView = useInView(viewRef);
+
+  useEffect(()=>{
+    if (isInView) setPage("#skills");
+  },[isInView])
+
+    return <motion.div ref={ref} id="skills" className="py-[6rem] bg-white min-h-[100vh] text-black">
 
     <motion.div className={`${lato.className} passionTitle text-center font-light tracking-[1px] text-3xl`}>What I Excel</motion.div>
 
-    <motion.div className="mt-[3.5rem] flex gap-12 md:gap-4 flex-col md:flex-row px-2 justify-evenly">
+    <motion.div ref={viewRef} className="mt-[3.5rem] flex gap-12 md:gap-4 flex-col md:flex-row px-2 justify-evenly">
               <motion.div className="pills flex flex-wrap justify-evenly gap-10">
                 {skillsA?.map((skillLink, i) => {
                   return (

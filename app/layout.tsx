@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import 'react-tooltip/dist/react-tooltip.css'
 import "./globals.css";
 import "./build.css";
+import { AnimatePresence } from "motion/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+      <AnimatePresence mode="wait">
+
         {
-        children
+          children
         }
+        </AnimatePresence>
       </body>
     </html>
   );

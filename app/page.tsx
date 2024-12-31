@@ -8,8 +8,9 @@ import NavBar from "@/Components/NavBar/NavBar";
 import Projects from "@/Components/Projects/Projects";
 import Resume from "@/Components/Resume/Resume";
 import Lenis from "@studio-freight/lenis";
-import { useEffect} from "react";
+import { useEffect, useState} from "react";
 import Skills from "@/Components/Skills/Skills";
+import { motion } from "motion/react";
 
 export default function App() {
 
@@ -24,18 +25,20 @@ export default function App() {
     return ()=>lenis.destroy();
   },[]);
 
+  const [page,setPage] = useState("home");
 
   return (
-    <div className="relative w-full bg-white text-black">
-      <NavBar />
-      <Home/>
-      <About/>
-      <Skills/>
-      <Experience/>
-      <Projects/>
+    
+    <motion.div layoutScroll key={"HomePage"} layout className="relative w-full bg-white text-black">
+      <NavBar page={page} />
+      <Home setPage={setPage}/>
+      <About setPage={setPage}/>
+      <Skills setPage={setPage}/>
+      <Experience setPage={setPage}/>
+      <Projects setPage={setPage}/>
       <Resume/>
-      <Contact/>
+      <Contact setPage={setPage}/>
       <Footer/>
-    </div>
+    </motion.div>
   );
 }

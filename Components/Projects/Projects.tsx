@@ -2,14 +2,14 @@ import { Lato } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/INFO";
-import { useRef } from "react";
-import { useScroll, useTransform , motion, useMotionValue } from "motion/react";
+import { useEffect, useRef } from "react";
+import { useScroll, useTransform , motion, useMotionValue, useInView } from "motion/react";
 
 
 const lato = Lato({ weight: "300", subsets: ["latin"] });
 
 
-const Projects = () => {
+const Projects = ({ setPage }: { setPage: (page: string) => void }) => {
 
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({
@@ -20,10 +20,17 @@ const Projects = () => {
     const translateY = useTransform(scrollYProgress,[0,1],[0,-500])
     const translateY2 = useTransform(scrollYProgress,[0,1],[0,-400])
 
+    const viewRef = useRef(null);
+      const isInView = useInView(viewRef);
+
+    useEffect(()=>{
+      if (isInView) setPage("#work");
+    },[isInView])
+
     return <motion.div layout ref={ref} id="work" className={`py-[8rem] flex flex-col items-center gap-2 bg-white text-black`}>
 
         <motion.div layout style={{ fontFamily: lato.style.fontFamily , translateY : translateY }} className="heading font-thin text-3xl tracking-[1px]">WHAT I&apos;VE DONE</motion.div>
-        <motion.div layout style={{ fontFamily: lato.style.fontFamily , translateY : translateY }} className="moreTagline font-light tracking-[1px]">{"(more coming soon)"}</motion.div>
+        <motion.div ref={viewRef} layout style={{ fontFamily: lato.style.fontFamily , translateY : translateY }} className="moreTagline font-light tracking-[1px]">{"(more coming soon)"}</motion.div>
 
         <div className="projectDiv flex flex-col justify-evenly md:flex-row w-full py-6 flex-wrap px-4 md:px-[10rem] md:gap-[2%]">
 

@@ -2,13 +2,13 @@ import { experience, expTagline, aboutme } from "@/INFO";
 import { Lato, Roboto_Slab } from "next/font/google";
 import { Tooltip } from "react-tooltip";
 import Image from "next/image";
-import {  cubicBezier, motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import {  cubicBezier, motion, useInView, useScroll, useTransform } from "motion/react";
+import { useEffect, useRef } from "react";
 
 const lato = Lato({ weight: "300", subsets: ["latin"] });
 const robotSlab = Roboto_Slab({ weight: "300", subsets: ["latin"] });
 
-const Experience = () => {
+const Experience = ({ setPage }: { setPage: (page: string) => void }) => {
 
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
@@ -16,7 +16,14 @@ const Experience = () => {
       offset: ["start end", "end start"]
   })
 
-  const translateY = useTransform(scrollYProgress,[0,0.5,0.9,1],[0,0,-450,-500])
+  const viewRef = useRef(null);
+    const isInView = useInView(viewRef);
+
+  useEffect(()=>{
+    if (isInView) setPage("#experience");
+  },[isInView])
+
+  const translateY = useTransform(scrollYProgress,[0,0.5,0.9,1],[100,0,-300,-500])
   
   return (
     <motion.div ref={ref} layout id="experience" className="flex flex-col min-h-[100vh] items-center bg-[#171717] text-slate-200 ">
@@ -29,12 +36,12 @@ const Experience = () => {
               <motion.div style={lato.style} viewport={{ once: true }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 } } transition={{ duration : 1 }} layout className={`text-center items-center justify-center flex mb-16 font-bold tracking-[1px] text-3xl`}>
                 Experience
               </motion.div>
-              <motion.div layout style={robotSlab.style} className="expTagline w-full text-lg font-light leading-[1.7] text-center">
+              <motion.div ref={viewRef} layout style={robotSlab.style} className="expTagline w-full text-lg font-light leading-[1.7] text-center">
                 {expTagline}
               </motion.div>
             </motion.div>
 
-            <motion.div layout className="right basis-1/2 flex flex-col justify-center items-center">
+            <motion.div  layout className="right basis-1/2 flex flex-col justify-center items-center">
 
               <motion.div layout className=" flex flex-col gap-16 justify-evenly items-center">
                 {experience?.map((item, i) => {
