@@ -26,7 +26,7 @@ const Footer = ()=>{
       lenis.raf(time)
       requestAnimationFrame(raf);
     }
-    const ele = document.querySelector('#home');
+    const ele = document.querySelector('#home') as HTMLElement;
     if(ele) lenis.scrollTo(ele, {easing : cubicBezier(0.5, 0, 0.75, 0), duration : 1.2})
 
     requestAnimationFrame(raf);

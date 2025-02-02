@@ -30,7 +30,7 @@ const Home = ({ setPage }: HomeProps) => {
             lenis.raf(time);
             requestAnimationFrame(raf);
         };
-        const ele = document.querySelector("#about");
+        const ele = document.querySelector("#about") as HTMLElement;
         // Disable the rule for this line
         // @ts-ignore        
         if (ele) lenis.scrollTo(ele, { duration: 3 });
