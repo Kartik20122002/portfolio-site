@@ -81,7 +81,7 @@ const NavBar = ({ page }: NavBarProps) => {
         onClick={() => setGoto("#home")}
         className="hover:opacity-80 text-[#ccc]  font-medium cursor-pointer"
       >
-        {name.toLocaleUpperCase() || "USER"}
+        {name?.toLocaleUpperCase() || "USER"}
       </motion.div>
 
       <div className="hidden md:!flex gap-8">

@@ -54,6 +54,10 @@ const Footer = ()=>{
             <span><FaRegCopyright className="text-[#aaa]" /></span>
             <span style={{fontFamily : lato.style.fontFamily}} className="text-[#aaa]">{name} {new Date().getFullYear()}</span>
         </div>
+
+        <Link href={'http://kartikhatwar2.vercel.app'} className="flex items-center gap-1 hover:text-blue-500 text-[.8rem] text-white font-bold">
+            Checkout New Portfolio
+        </Link>
     </div>
 }
 
