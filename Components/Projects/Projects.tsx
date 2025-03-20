@@ -49,7 +49,6 @@ const Projects = ({ setPage }: { setPage: (page: string) => void }) => {
 
 const ProjectPill = ({ project, }: any) => {
 
-
     return (
         <>
             <div className="rounded-lg shadow border border-[#a5a5a565] overflow-hidden z-0 w-full mx-auto md:mx-0 relative !aspect-video my-4 basis-[30%]">
